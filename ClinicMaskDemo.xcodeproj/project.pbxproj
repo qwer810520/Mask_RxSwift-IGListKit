@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		39331F1B2491373D006446F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39331F1A2491373D006446F6 /* Assets.xcassets */; };
 		39331F1E2491373D006446F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39331F1C2491373D006446F6 /* LaunchScreen.storyboard */; };
 		39331F292491373D006446F6 /* ClinicMaskDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F282491373D006446F6 /* ClinicMaskDemoTests.swift */; };
+		39331F3724913A0B006446F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F3624913A0B006446F6 /* ViewController.swift */; };
 		5F4B58EF34E1FEB484805E0D /* Pods_ClinicMaskDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C011FB9B69C5362D235D08 /* Pods_ClinicMaskDemo.framework */; };
 		DA77FB436CB528EED90C2992 /* Pods_ClinicMaskDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		39331F242491373D006446F6 /* ClinicMaskDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicMaskDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39331F282491373D006446F6 /* ClinicMaskDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicMaskDemoTests.swift; sourceTree = "<group>"; };
 		39331F2A2491373D006446F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39331F3624913A0B006446F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicMaskDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FCF8A28842CC2A684CE6AA /* Pods-ClinicMaskDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemo.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemo/Pods-ClinicMaskDemo.release.xcconfig"; sourceTree = "<group>"; };
 		984D78633DAB2A65717AF0C1 /* Pods-ClinicMaskDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemoTests/Pods-ClinicMaskDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,9 @@
 		39331F1024913738006446F6 /* ClinicMaskDemo */ = {
 			isa = PBXGroup;
 			children = (
+				39331F35249139F6006446F6 /* Models */,
+				39331F34249139F2006446F6 /* Views */,
+				39331F33249139E9006446F6 /* ViewControllers */,
 				39331F1124913738006446F6 /* AppDelegate.swift */,
 				39331F1324913738006446F6 /* SceneDelegate.swift */,
 				39331F1A2491373D006446F6 /* Assets.xcassets */,
@@ -103,6 +108,28 @@
 				39331F2A2491373D006446F6 /* Info.plist */,
 			);
 			path = ClinicMaskDemoTests;
+			sourceTree = "<group>";
+		};
+		39331F33249139E9006446F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39331F3624913A0B006446F6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39331F34249139F2006446F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39331F35249139F6006446F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D2ADC47098E0CFD59A3AA219 /* Frameworks */ = {
@@ -122,7 +149,6 @@
 				B0D781E03A97252006AA6289 /* Pods-ClinicMaskDemoTests.debug.xcconfig */,
 				984D78633DAB2A65717AF0C1 /* Pods-ClinicMaskDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +164,7 @@
 				39331F0B24913738006446F6 /* Frameworks */,
 				39331F0C24913738006446F6 /* Resources */,
 				F3C09199CFD944DF70D983B7 /* [CP] Embed Pods Frameworks */,
+				39331F3824913AE3006446F6 /* Run SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -225,6 +252,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		39331F3824913AE3006446F6 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint \n";
+		};
 		D7D53501F6D89B8C23BB10BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39331F3724913A0B006446F6 /* ViewController.swift in Sources */,
 				39331F1224913738006446F6 /* AppDelegate.swift in Sources */,
 				39331F1424913738006446F6 /* SceneDelegate.swift in Sources */,
 			);
