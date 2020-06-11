@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+
+  private let disposeBag = DisposeBag()
+  private var testList = BehaviorSubject<[Pharmacies]>(value: [])
 
   // MARK: - UIViewController
 
@@ -25,5 +30,21 @@ class ViewController: UIViewController {
 
   private func setUserInterface() {
     view.backgroundColor = .systemPink
+    testAPI()
+    bindObservable()
+  }
+
+  // MARK: - API Methods
+
+  private func testAPI() {
+    APIManager.shared.fetchClinicData()
+      .bind(to: testList)
+      .disposed(by: disposeBag)
+  }
+
+  private func bindObservable() {
+    testList.subscribe(onNext: { (infoList) in
+      print(infoList.count)
+    }).disposed(by: disposeBag)
   }
 }

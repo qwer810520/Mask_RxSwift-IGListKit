@@ -13,6 +13,10 @@
 		39331F1E2491373D006446F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39331F1C2491373D006446F6 /* LaunchScreen.storyboard */; };
 		39331F292491373D006446F6 /* ClinicMaskDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F282491373D006446F6 /* ClinicMaskDemoTests.swift */; };
 		39331F3724913A0B006446F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F3624913A0B006446F6 /* ViewController.swift */; };
+		39331F3C24913CAB006446F6 /* APIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F3B24913CAB006446F6 /* APIType.swift */; };
+		39331F3F24913D5C006446F6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F3E24913D5C006446F6 /* APIManager.swift */; };
+		39331F4124913EB8006446F6 /* PharmaciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F4024913EB8006446F6 /* PharmaciesList.swift */; };
+		39331F4324913EC4006446F6 /* Pharmacies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39331F4224913EC3006446F6 /* Pharmacies.swift */; };
 		5F4B58EF34E1FEB484805E0D /* Pods_ClinicMaskDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C011FB9B69C5362D235D08 /* Pods_ClinicMaskDemo.framework */; };
 		DA77FB436CB528EED90C2992 /* Pods_ClinicMaskDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,10 @@
 		39331F282491373D006446F6 /* ClinicMaskDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicMaskDemoTests.swift; sourceTree = "<group>"; };
 		39331F2A2491373D006446F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39331F3624913A0B006446F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39331F3B24913CAB006446F6 /* APIType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIType.swift; sourceTree = "<group>"; };
+		39331F3E24913D5C006446F6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		39331F4024913EB8006446F6 /* PharmaciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmaciesList.swift; sourceTree = "<group>"; };
+		39331F4224913EC3006446F6 /* Pharmacies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pharmacies.swift; sourceTree = "<group>"; };
 		55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicMaskDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FCF8A28842CC2A684CE6AA /* Pods-ClinicMaskDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemo.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemo/Pods-ClinicMaskDemo.release.xcconfig"; sourceTree = "<group>"; };
 		984D78633DAB2A65717AF0C1 /* Pods-ClinicMaskDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemoTests/Pods-ClinicMaskDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 		39331F1024913738006446F6 /* ClinicMaskDemo */ = {
 			isa = PBXGroup;
 			children = (
+				39331F3924913C90006446F6 /* Networking */,
 				39331F35249139F6006446F6 /* Models */,
 				39331F34249139F2006446F6 /* Views */,
 				39331F33249139E9006446F6 /* ViewControllers */,
@@ -128,8 +137,27 @@
 		39331F35249139F6006446F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				39331F4024913EB8006446F6 /* PharmaciesList.swift */,
+				39331F4224913EC3006446F6 /* Pharmacies.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		39331F3924913C90006446F6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				39331F3A24913C9B006446F6 /* Manager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		39331F3A24913C9B006446F6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				39331F3B24913CAB006446F6 /* APIType.swift */,
+				39331F3E24913D5C006446F6 /* APIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		D2ADC47098E0CFD59A3AA219 /* Frameworks */ = {
@@ -338,7 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39331F3C24913CAB006446F6 /* APIType.swift in Sources */,
 				39331F3724913A0B006446F6 /* ViewController.swift in Sources */,
+				39331F4124913EB8006446F6 /* PharmaciesList.swift in Sources */,
+				39331F4324913EC4006446F6 /* Pharmacies.swift in Sources */,
+				39331F3F24913D5C006446F6 /* APIManager.swift in Sources */,
 				39331F1224913738006446F6 /* AppDelegate.swift in Sources */,
 				39331F1424913738006446F6 /* SceneDelegate.swift in Sources */,
 			);
