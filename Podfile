@@ -7,6 +7,9 @@ target 'ClinicMaskDemo' do
 
   # Pods for ClinicMaskDemo
 
+  # Basic
+  pod 'IGListKit', '~> 4.0'
+
   # Networking  
   pod 'Moya', '~> 14.0.0-beta.5'
   pod 'Moya/RxSwift', '~> 14.0.0-beta.5'
@@ -15,6 +18,7 @@ target 'ClinicMaskDemo' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RxSwiftExt', '~> 5'
+  pod 'RxDataSources'
 
   # Lint
   pod 'SwiftLint'

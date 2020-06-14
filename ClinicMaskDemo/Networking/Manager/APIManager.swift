@@ -16,11 +16,18 @@ class APIManager: NSObject {
 
   let provider = MoyaProvider<APIType>()
 
-  func fetchClinicData() -> Observable<[Pharmacies]> {
+  enum Keys: String {
+    case features
+  }
+
+  func fetchClinicData() -> Observable<[County]> {
     return provider.rx.request(.fetchClinicData)
       .asObservable()
       .filterSuccessfulStatusCodes()
-      .map(PharmaciesList.self)
-      .map { $0.features }
+      .map([Pharmacies].self, atKeyPath: Keys.features.rawValue)
+      .map { pharmacies in
+        return Dictionary(grouping: pharmacies) { $0.county }
+          .map { County(info: $0) }
+      }
   }
 }

@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (5.1.0)
+  - Differentiator (4.0.1)
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -10,6 +14,10 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -24,9 +32,11 @@ PODS:
   - SwiftLint (0.39.2)
 
 DEPENDENCIES:
+  - IGListKit (~> 4.0)
   - Moya (~> 14.0.0-beta.5)
   - Moya/RxSwift (~> 14.0.0-beta.5)
   - RxCocoa (~> 5)
+  - RxDataSources
   - RxSwift (~> 5)
   - RxSwiftExt (~> 5)
   - SwiftLint
@@ -34,8 +44,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Differentiator
+    - IGListDiffKit
+    - IGListKit
     - Moya
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -43,13 +57,17 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 29bd0df986ad9f68893e799aa91c24e50aa9878a
+PODFILE CHECKSUM: 8d123b85a6eaca49c98dca2057f7227010c42f07
 
 COCOAPODS: 1.9.1
