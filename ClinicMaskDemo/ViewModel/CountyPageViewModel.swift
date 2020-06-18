@@ -13,12 +13,11 @@ import RxSwift
 class CountyPageViewModel: NSObject {
 
   private let disposebag = DisposeBag()
+  let items = BehaviorRelay<[IGListCounty]>(value: [])
 
   // MARK: - Initialization
 
-  override init() {
-    super.init()
-  }
+  override init() { super.init() }
 }
 
   // MARK: - ViewModelType
@@ -30,20 +29,26 @@ extension CountyPageViewModel: ViewModelType {
   }
 
   struct Output {
-    let countys: BehaviorRelay<[CountySection]>
+    let countys: BehaviorRelay<[County]>
   }
 
   func transform(input: Input) -> Output {
-    let countyInfo = BehaviorRelay<[CountySection]>(value: [])
+    let countyInfo = BehaviorRelay<[County]>(value: [])
+
     input.fetchPharmacieTrigger
       .flatMapLatest { (_) -> Observable<[County]> in
-        return APIManager.shared.fetchClinicData()
+        return APIManager.shared.fetchPharmaciesData()
       }
-      .map({ countys in
-        countys.map { CountySection(header: $0.header, items: [$0]) }
-      })
       .bind(to: countyInfo)
       .disposed(by: disposebag)
+
+    input.fetchPharmacieTrigger
+      .flatMapLatest { _ -> Observable<[IGListCounty]> in
+        return APIManager.shared.fetchfetchPharmaciesDataForIGListKit()
+      }
+      .bind(to: items)
+      .disposed(by: disposebag)
+
     return Output(countys: countyInfo)
   }
 }

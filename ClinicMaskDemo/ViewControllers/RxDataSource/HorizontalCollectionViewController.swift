@@ -16,10 +16,8 @@ class HorizontalCollectionViewController: UIViewController {
   var countys = BehaviorRelay<[County]>(value: [])
   private let disposeBag = DisposeBag()
 
-  lazy private var collectionView: UICollectionView = {
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-    collectionView.translatesAutoresizingMaskIntoConstraints = false
-    collectionView.backgroundColor = .white
+  lazy var collectionView: UICollectionView = {
+    let collectionView = UICollectionView(layout: flowLayout)
     collectionView.register(with: [PharmaciesInfoCell.self])
     return collectionView
   }()

@@ -20,7 +20,7 @@ class APIManager: NSObject {
     case features
   }
 
-  func fetchClinicData() -> Observable<[County]> {
+  func fetchPharmaciesData() -> Observable<[County]> {
     return provider.rx.request(.fetchClinicData)
       .asObservable()
       .filterSuccessfulStatusCodes()
@@ -28,6 +28,17 @@ class APIManager: NSObject {
       .map { pharmacies in
         return Dictionary(grouping: pharmacies) { $0.county }
           .map { County(info: $0) }
+      }
+  }
+
+  func fetchfetchPharmaciesDataForIGListKit() -> Observable<[IGListCounty]> {
+    return provider.rx.request(.fetchClinicData)
+      .asObservable()
+      .filterSuccessfulStatusCodes()
+      .map([Pharmacies].self, atKeyPath: Keys.features.rawValue)
+      .map { pharmacies in
+        return Dictionary(grouping: pharmacies) { $0.county }
+          .map { IGListCounty(info: $0) }
       }
   }
 }

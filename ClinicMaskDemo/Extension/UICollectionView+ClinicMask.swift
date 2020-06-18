@@ -24,6 +24,15 @@ extension CollectionReusableType {
 }
 
 extension UICollectionView {
+
+  convenience init(layout: UICollectionViewLayout) {
+    self.init(frame: .zero, collectionViewLayout: layout)
+    translatesAutoresizingMaskIntoConstraints = false
+    backgroundColor = .white
+    showsVerticalScrollIndicator = false
+    showsHorizontalScrollIndicator = false
+  }
+
   func register(with cells: [UICollectionViewCell.Type]) {
      cells.forEach { register($0.self, forCellWithReuseIdentifier: $0.identifier) }
    }

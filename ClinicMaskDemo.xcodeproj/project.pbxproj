@@ -24,9 +24,16 @@
 		394A6C282494CA5100310545 /* HorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A6C272494CA5100310545 /* HorizontalCollectionViewController.swift */; };
 		394A6C2A2494D54B00310545 /* PharmaciesInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A6C292494D54B00310545 /* PharmaciesInfoCell.swift */; };
 		3955D0BA24921E6300B932F5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3955D0B924921E6300B932F5 /* ViewModelType.swift */; };
+		396F34582497424C00B6F0F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396F34572497424B00B6F0F9 /* MainViewController.swift */; };
+		396F348724974B9100B6F0F9 /* CountyPageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396F348624974B9100B6F0F9 /* CountyPageListController.swift */; };
 		397642AF2491FC88004B5163 /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397642AE2491FC88004B5163 /* County.swift */; };
 		397642DF24920072004B5163 /* CountyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397642DE24920072004B5163 /* CountyPageViewModel.swift */; };
-		397642E1249200BD004B5163 /* CountyPageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397642E0249200BD004B5163 /* CountyPageListController.swift */; };
+		397642E1249200BD004B5163 /* CountySectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397642E0249200BD004B5163 /* CountySectionListController.swift */; };
+		39C35BE72499F72A0039FB0F /* IGCountyHorizontalSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C35BE62499F72A0039FB0F /* IGCountyHorizontalSessionController.swift */; };
+		39C35BE92499FABF0039FB0F /* IGCountyHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C35BE82499FABF0039FB0F /* IGCountyHorizontalCell.swift */; };
+		39C35BEB2499FC760039FB0F /* IGPharmaciesHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C35BEA2499FC760039FB0F /* IGPharmaciesHorizontalController.swift */; };
+		39FA175A2498F43E00A36B16 /* IGListCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA17592498F43E00A36B16 /* IGListCounty.swift */; };
+		39FA175C2498F58300A36B16 /* IGCountyVerticalSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA175B2498F58300A36B16 /* IGCountyVerticalSessionController.swift */; };
 		5F4B58EF34E1FEB484805E0D /* Pods_ClinicMaskDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C011FB9B69C5362D235D08 /* Pods_ClinicMaskDemo.framework */; };
 		DA77FB436CB528EED90C2992 /* Pods_ClinicMaskDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,9 +70,16 @@
 		394A6C272494CA5100310545 /* HorizontalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewController.swift; sourceTree = "<group>"; };
 		394A6C292494D54B00310545 /* PharmaciesInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmaciesInfoCell.swift; sourceTree = "<group>"; };
 		3955D0B924921E6300B932F5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		396F34572497424B00B6F0F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		396F348624974B9100B6F0F9 /* CountyPageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyPageListController.swift; sourceTree = "<group>"; };
 		397642AE2491FC88004B5163 /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
 		397642DE24920072004B5163 /* CountyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyPageViewModel.swift; sourceTree = "<group>"; };
-		397642E0249200BD004B5163 /* CountyPageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyPageListController.swift; sourceTree = "<group>"; };
+		397642E0249200BD004B5163 /* CountySectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountySectionListController.swift; sourceTree = "<group>"; };
+		39C35BE62499F72A0039FB0F /* IGCountyHorizontalSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCountyHorizontalSessionController.swift; sourceTree = "<group>"; };
+		39C35BE82499FABF0039FB0F /* IGCountyHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCountyHorizontalCell.swift; sourceTree = "<group>"; };
+		39C35BEA2499FC760039FB0F /* IGPharmaciesHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGPharmaciesHorizontalController.swift; sourceTree = "<group>"; };
+		39FA17592498F43E00A36B16 /* IGListCounty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGListCounty.swift; sourceTree = "<group>"; };
+		39FA175B2498F58300A36B16 /* IGCountyVerticalSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCountyVerticalSessionController.swift; sourceTree = "<group>"; };
 		55B35AE523A39FCB88B4CA78 /* Pods_ClinicMaskDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClinicMaskDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FCF8A28842CC2A684CE6AA /* Pods-ClinicMaskDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemo.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemo/Pods-ClinicMaskDemo.release.xcconfig"; sourceTree = "<group>"; };
 		984D78633DAB2A65717AF0C1 /* Pods-ClinicMaskDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClinicMaskDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ClinicMaskDemoTests/Pods-ClinicMaskDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,8 +159,9 @@
 		39331F33249139E9006446F6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				397642E0249200BD004B5163 /* CountyPageListController.swift */,
-				394A6C272494CA5100310545 /* HorizontalCollectionViewController.swift */,
+				396F348524974B6600B6F0F9 /* IGListKit */,
+				396F34562497423700B6F0F9 /* RxDataSource */,
+				396F34572497424B00B6F0F9 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +172,7 @@
 				394A6C212494C55E00310545 /* CountyHeaderView.swift */,
 				394A6C252494C9F300310545 /* HorizontalCollectionViewCell.swift */,
 				394A6C292494D54B00310545 /* PharmaciesInfoCell.swift */,
+				39C35BE82499FABF0039FB0F /* IGCountyHorizontalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +184,7 @@
 				39331F4224913EC3006446F6 /* Pharmacies.swift */,
 				397642AE2491FC88004B5163 /* County.swift */,
 				394A6C1F2494C06400310545 /* CountySection.swift */,
+				39FA17592498F43E00A36B16 /* IGListCounty.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +229,26 @@
 				3955D0B924921E6300B932F5 /* ViewModelType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		396F34562497423700B6F0F9 /* RxDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				397642E0249200BD004B5163 /* CountySectionListController.swift */,
+				394A6C272494CA5100310545 /* HorizontalCollectionViewController.swift */,
+			);
+			path = RxDataSource;
+			sourceTree = "<group>";
+		};
+		396F348524974B6600B6F0F9 /* IGListKit */ = {
+			isa = PBXGroup;
+			children = (
+				396F348624974B9100B6F0F9 /* CountyPageListController.swift */,
+				39FA175B2498F58300A36B16 /* IGCountyVerticalSessionController.swift */,
+				39C35BE62499F72A0039FB0F /* IGCountyHorizontalSessionController.swift */,
+				39C35BEA2499FC760039FB0F /* IGPharmaciesHorizontalController.swift */,
+			);
+			path = IGListKit;
 			sourceTree = "<group>";
 		};
 		D2ADC47098E0CFD59A3AA219 /* Frameworks */ = {
@@ -420,13 +457,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C35BE92499FABF0039FB0F /* IGCountyHorizontalCell.swift in Sources */,
+				39C35BE72499F72A0039FB0F /* IGCountyHorizontalSessionController.swift in Sources */,
 				39331F3C24913CAB006446F6 /* APIType.swift in Sources */,
 				397642AF2491FC88004B5163 /* County.swift in Sources */,
+				39C35BEB2499FC760039FB0F /* IGPharmaciesHorizontalController.swift in Sources */,
+				39FA175C2498F58300A36B16 /* IGCountyVerticalSessionController.swift in Sources */,
 				39331F4124913EB8006446F6 /* PharmaciesList.swift in Sources */,
 				394A6C222494C55E00310545 /* CountyHeaderView.swift in Sources */,
 				394A6C2A2494D54B00310545 /* PharmaciesInfoCell.swift in Sources */,
 				397642DF24920072004B5163 /* CountyPageViewModel.swift in Sources */,
-				397642E1249200BD004B5163 /* CountyPageListController.swift in Sources */,
+				397642E1249200BD004B5163 /* CountySectionListController.swift in Sources */,
 				394A6C202494C06400310545 /* CountySection.swift in Sources */,
 				39331F4324913EC4006446F6 /* Pharmacies.swift in Sources */,
 				394A6C282494CA5100310545 /* HorizontalCollectionViewController.swift in Sources */,
@@ -435,8 +476,11 @@
 				394A6C262494C9F300310545 /* HorizontalCollectionViewCell.swift in Sources */,
 				394A6C242494C7DC00310545 /* UICollectionView+ClinicMask.swift in Sources */,
 				39331F1224913738006446F6 /* AppDelegate.swift in Sources */,
+				396F34582497424C00B6F0F9 /* MainViewController.swift in Sources */,
+				396F348724974B9100B6F0F9 /* CountyPageListController.swift in Sources */,
 				3955D0BA24921E6300B932F5 /* ViewModelType.swift in Sources */,
 				39331F1424913738006446F6 /* SceneDelegate.swift in Sources */,
+				39FA175A2498F43E00A36B16 /* IGListCounty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W4XUH8LUQ;
 				INFOPLIST_FILE = ClinicMaskDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,6 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W4XUH8LUQ;
 				INFOPLIST_FILE = ClinicMaskDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

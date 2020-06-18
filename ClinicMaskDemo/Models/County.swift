@@ -32,6 +32,8 @@ struct County {
   }
 }
 
+  // MARK: - SectionModelType
+
 extension County: SectionModelType {
   typealias Item = Pharmacies
 

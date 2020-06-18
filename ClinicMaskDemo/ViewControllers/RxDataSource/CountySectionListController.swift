@@ -1,5 +1,5 @@
 //
-//  CountyPageListController.swift
+//  CountySectionListController.swift
 //  ClinicMaskDemo
 //
 //  Created by Min on 2020/6/11.
@@ -11,20 +11,14 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class CountyPageListController: UIViewController {
+class CountySectionListController: UIViewController {
 
   private var viewModel: CountyPageViewModel?
   private let disposeBag = DisposeBag()
   private let fetchPharmacieTrigger = PublishSubject<Void>()
 
-  lazy private var segmentedControl: UISegmentedControl = {
-    let view = UISegmentedControl(items: ["collectionView", "IGListKit"])
-    view.selectedSegmentIndex = 0
-    return view
-  }()
-
-  lazy private var rxCollectionView: UICollectionView = {
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+  lazy private var collectionView: UICollectionView = {
+    let collectionView = UICollectionView(layout: flowLayout)
     collectionView.translatesAutoresizingMaskIntoConstraints = false
     collectionView.backgroundColor = .white
     collectionView.registerHeader(with: [CountyHeaderView.self])
@@ -65,9 +59,8 @@ class CountyPageListController: UIViewController {
   // MARK: - Private Methods
 
   private func setUserInterface() {
-    view.addSubview(rxCollectionView)
+    view.addSubview(collectionView)
     view.addSubview(indicator)
-    navigationItem.titleView = segmentedControl
     setupLayout()
   }
 
@@ -76,13 +69,13 @@ class CountyPageListController: UIViewController {
       withVisualFormat: "V:|[collectionView]|",
       options: [],
       metrics: nil,
-      views: ["collectionView": rxCollectionView]))
+      views: ["collectionView": collectionView]))
 
     view.addConstraints(NSLayoutConstraint.constraints(
       withVisualFormat: "H:|[collectionView]|",
       options: [],
       metrics: nil,
-      views: ["collectionView": rxCollectionView]))
+      views: ["collectionView": collectionView]))
 
     indicator.center = view.center
   }
@@ -102,8 +95,11 @@ class CountyPageListController: UIViewController {
     })
 
     outPut?.countys
+      .map({ countys in
+        countys.map { CountySection(header: $0.header, items: [$0]) }
+      })
       .asObservable()
-      .bind(to: rxCollectionView.rx.items(dataSource: dataSource))
+      .bind(to: collectionView.rx.items(dataSource: dataSource))
       .disposed(by: disposeBag)
 
     outPut?.countys
