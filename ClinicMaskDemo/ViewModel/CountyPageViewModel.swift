@@ -45,9 +45,7 @@ extension CountyPageViewModel: ViewModelType {
     input.fetchPharmacieTrigger
       .flatMapLatest { _ -> Observable<[IGListCounty]> in
         return APIManager.shared.fetchfetchPharmaciesDataForIGListKit()
-      }.map({ countys -> Observable<IGListCounty> in
-
-      })
+      }
       .bind(to: items)
       .disposed(by: disposebag)
 
